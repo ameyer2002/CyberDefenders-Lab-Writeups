@@ -6,6 +6,7 @@
 
 **Tools:**
 * VirusTotal
+* Red Canary
 
 # Questions
 
@@ -82,7 +83,31 @@ We need to change our intel source since VirusTotal did not catch the file dropp
 
 <img width="899" height="768" alt="image" src="https://github.com/user-attachments/assets/bb30b086-cd1c-4a64-9bbe-61f9dd81d118" />
 
-We still have threat intel report from Red Canary that already conducted malware analysis for us and here is the file that dropped in Appdata folder
+We still have threat intel report from [Red Canary](https://redcanary.com/blog/threat-intelligence/yellow-cockatoo/) that already conducted malware analysis for us and here is the file that dropped in Appdata folder
 
+<details>
+  <summary>Answer</summary>
 
+   ```
+   solarmarker.dat
+   ```
+
+</details>
  
+> Q6: It is crucial to identify the C2 servers with which the malware communicates to block its communication and prevent further data exfiltration. What is the C2 server that the malware is communicating with?
+
+<img width="974" height="446" alt="image" src="https://github.com/user-attachments/assets/ee4c09fe-039d-48ab-a719-b8862897abce" />
+
+Canary also noted the C2 url to add it to the blacklist so we can use this as the answer for this question.
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   https://gogohid.com
+   ```
+
+</details>
+
+**Takeaway:**
+This exercise really drove home the importance of not relying on a single tool during an investigation. I learned how to piece together a full threat profile by starting with VirusTotal for the static details—like digging into PE headers for timestamps and checking the Community tab for context. However, the biggest takeaway was seeing the limitations of static analysis firsthand. By switching to a Red Canary report, I was able to look at behavioral indicators like specific file drops and C2 servers that I would have otherwise missed. It definitely showed me why cross-referencing different intelligence sources is important to getting the full story.
