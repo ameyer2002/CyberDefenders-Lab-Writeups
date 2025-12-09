@@ -195,5 +195,5 @@ The University of Notre Dame is located in **Indiana**.
 
 </details>
 
-**Takeaway:** 
+# Takeaway:
 I got some really solid hands-on experience in this Threat Intelligence lab. I used OSINT to figure out who the insider threat was and track them down. I started with digital forensics on their GitHub account, which taught me how to find critical stuff like exposed API keys, passwords that needed to be decoded with Cyberchef, and the crypto mining tool they were running. The whole lab shifted from digital clues to real-world identity. Using the Sherlock tool, I connected the username to their gaming and social media accounts. Finally, by using Google Lens on photos from their Instagram, I was able to pinpoint where they traveled, where their family lived, where the office was, and their current location. It was a complete process, linking the initial hack all the way to a full physical profile of the attacker.
