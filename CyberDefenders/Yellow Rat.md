@@ -109,5 +109,5 @@ Canary also noted the C2 url to add it to the blacklist so we can use this as th
 
 </details>
 
-**Takeaway:**
+# Takeaway:
 This exercise really drove home the importance of not relying on a single tool during an investigation. I learned how to piece together a full threat profile by starting with VirusTotal for the static details—like digging into PE headers for timestamps and checking the Community tab for context. However, the biggest takeaway was seeing the limitations of static analysis firsthand. By switching to a Red Canary report, I was able to look at behavioral indicators like specific file drops and C2 servers that I would have otherwise missed. It definitely showed me why cross-referencing different intelligence sources is important to getting the full story.
