@@ -105,5 +105,5 @@ Look at the content of the php reverse shell
 
 </details>
 
-**Takeaway:** 
+# Takeaway:
 This forensics lab was a great way to get some hands-on experience, teaching me how to pick apart a packet capture to figure out exactly how this web server got compromised. By using Wireshark and ipgeolocation, I was able to track down where the attack came from and identify the hacker by checking their HTTP traffic. Filtering the network stream for POST requests made it easy to find the malicious file upload that planted the web shell, which let me find its filename and the vulnerable directory it landed in. I finished up by digging into the shell's code to figure out the unauthorized port it was using for C2 communication and identifying the sensitive file the attacker was trying to steal, collecting all the key clues needed to fix the system.
