@@ -115,5 +115,5 @@ We can query for the threat actor's IP address, the status code 200, and **messa
 
 </details>
 
-**Takeaway:**
+# Takeaway:
 This threat hunting lab was a great experience, teaching me how to react to a zero-day like CVE-2024-3400. It was fun to reconstruct the attack chain inside the ELK stack. I started by filtering the logs for errors, like "failed to unmarshal", to find the initial hacker's IP and when they first got in. From there, I pivoted to checking their actual commands. I had to use CyberChef to decode their payloads which was important in figuring out the reverse shell port and how they planned to stay persistent on the machine. Finally, by watching the GET requests and looking for 404 errors that turned into successful 200 downloads, I managed to track down the sensitive configuration file they were trying to steal. It gave me a complete, end-to-end picture of the entire intrusion.
