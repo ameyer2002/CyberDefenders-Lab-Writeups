@@ -179,3 +179,66 @@ Going back to the TMP directory, I wanted to see if there were any other suspici
 
 </details>
 
+> Q13: What was the attackers external control and command servers IP?
+
+I took a look at the hosts file which is located at “C:\Windows\System32\drivers\etc”. This file serves as a local DNS allowing the local machine to map hostnames to IP addresses. Looking at the file, “google.com” definitely does not use the IP address it was assigned to.
+
+<img width="1910" height="873" alt="image" src="https://github.com/user-attachments/assets/fa83333b-3097-4a4e-ae9c-85c4f74a8a9d" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   76.32.97.132
+   ```
+
+</details>
+
+> Q14: What was the extension name of the shell uploaded via the servers website?
+
+ I went to the “C:\inetpub” directory which is the location of web server log files for Microsoft Internet Information Services, which is the common web server for Windows. In it, there is another folder called **wwwroot**. I can see 2 files with a **.jsp** extension.
+
+<img width="1899" height="877" alt="image" src="https://github.com/user-attachments/assets/b204cdad-5b32-44c8-9bea-0a32b06b1482" />
+
+I will open PowerShell and change to this directory with **C:\inetpub\wwwroot**. I can then run **Get-Content .\tests.jsp** which will display the contents of the file. 
+
+<img width="1857" height="849" alt="image" src="https://github.com/user-attachments/assets/edc59047-4193-4d46-b600-7f1747db4d0d" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   .jsp
+   ```
+
+</details>
+
+> Q15: What was the last port the attacker opened?
+
+To check this, I can go to **Windows Firewall with Advanced Security** and check the Inbound Rules. Right away, I can see the first rule at the top is **Allow outside connections for development** which is essentially a rule to allow external users to connect to the local machine which is very dangerous. After clicking on the properties of this rule, I can see the local port.
+
+<img width="1900" height="878" alt="image" src="https://github.com/user-attachments/assets/1df8f686-ced1-4017-9810-aae9540811a0" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   1337
+   ```
+
+</details>
+
+> Q16: Check for DNS poisoning, what site was targeted?
+
+Earlier when I opened the hosts file, I saw the IP address for google.com was definitely not google's IP which tells me the attacker was spoofing the domain to redirect users to 76.32.97.132.
+
+<img width="1910" height="873" alt="image" src="https://github.com/user-attachments/assets/fa83333b-3097-4a4e-ae9c-85c4f74a8a9d" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   google.com
+   ```
+
+</details>
