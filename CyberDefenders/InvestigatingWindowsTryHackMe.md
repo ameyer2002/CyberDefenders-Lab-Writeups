@@ -150,3 +150,32 @@ I wanted to check the C: Drive for any extra potential folders which I found a T
    ```
 
 </details>
+
+> Q11: During the compromise, at what time did Windows first assign special privileges to a new logon?
+
+My filtering isn't working but what I would do here is go to Event Viewer, Windows Logs, and Security. I would then set a filter for the time range to be between 03/02/2019 12:00:00 AM - 03/02/2019 11:59:59 PM to check all the logs on this day. I would also set the Event ID to 4672 which means: Special privileges assigned to new logon. https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   03/02/2019 4:04:49 PM
+   ```
+
+</details>
+
+> Q12: What tool was used to get Windows passwords?
+
+Going back to the TMP directory, I wanted to see if there were any other suspicious files in here that would tell us which tool the attacker was using to gather passwords. I saw a file called **mim-out** which I opened up to see what this was and I can tell it's a credential dumping tool.
+
+<img width="1910" height="877" alt="image" src="https://github.com/user-attachments/assets/0ff01acc-aad0-4d78-87ff-2c152f9b4932" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   Mimikatz
+   ```
+
+</details>
+
