@@ -27,3 +27,12 @@ Looking in the Relations section, I can see there are two contacted URLs, both o
 <img width="2085" height="1106" alt="image" src="https://github.com/user-attachments/assets/ee5052e2-bebe-4dc2-8450-e68886095d5e" />
 
 <img width="2137" height="1110" alt="image" src="https://github.com/user-attachments/assets/e9de27ef-000d-4d9e-b6b9-d50e8e8335c8" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   	http://171.22.28.221/5c06c05b7b34e8e6.php
+   ```
+
+</details>
