@@ -19,3 +19,11 @@ I can see in the details section that there are some dates related to the histor
    ```
 
 </details>
+
+> Q2: Identifying the command and control (C2) server that the malware communicates with can help trace back to the attacker. Which C2 server does the malware in the PPT file communicate with?
+
+Looking in the Relations section, I can see there are two contacted URLs, both of which were scanned by different security vendors as malicious. I did some research and the php link is likely the C2 endpoint because it’s a server-side script that can receive data from an infected machine and send back commands, enabling ongoing communication. The dll link is a shared library that allows applications to access common functions without having the code embedded within their own executable file. Also, looking at each URL, I can see the php link contains crowdsourced intelligence that this this URL steals botnet C2.
+
+<img width="2085" height="1106" alt="image" src="https://github.com/user-attachments/assets/ee5052e2-bebe-4dc2-8450-e68886095d5e" />
+
+<img width="2137" height="1110" alt="image" src="https://github.com/user-attachments/assets/e9de27ef-000d-4d9e-b6b9-d50e8e8335c8" />
