@@ -36,3 +36,33 @@ Looking in the Relations section, I can see there are two contacted URLs, both o
    ```
 
 </details>
+
+> Q3: Identifying the initial actions of the malware post-infection can provide insights into its primary objectives. What is the first library that the malware requests post-infection?
+
+A lot of good info came from the behavior section so I spent most of my time looking through here. Since I was looking for a specific library that the malware requested, I looked at any file that could have some indication it was requesting a library. Looking around, I found a dll file under files dropped which means the malware created or wrote that file onto the system during execution.
+
+<img width="1953" height="1110" alt="image" src="https://github.com/user-attachments/assets/2a991e11-2cbe-4d18-9de9-be734f24f35b" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   	sqlite3.dll
+   ```
+
+</details>
+
+> Q4: By examining the provided Any.run report, what RC4 key is used by the malware to decrypt its base64-encoded string?
+
+A link was provided to the report that had the RC4 key posted in the malware configuration.
+
+<img width="1977" height="915" alt="image" src="https://github.com/user-attachments/assets/acda5dc7-7c29-4645-89d8-714e755b7322" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   	5329514621441247975720749009
+   ```
+
+</details>
