@@ -66,3 +66,6 @@ A link was provided to the report that had the RC4 key posted in the malware con
    ```
 
 </details>
+
+> Q5: By examining the MITRE ATT&CK techniques displayed in the Any.run sandbox report, identify the main MITRE technique (not sub-techniques) the malware uses to steal the user’s password.
+
