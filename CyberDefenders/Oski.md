@@ -69,3 +69,17 @@ A link was provided to the report that had the RC4 key posted in the malware con
 
 > Q5: By examining the MITRE ATT&CK techniques displayed in the Any.run sandbox report, identify the main MITRE technique (not sub-techniques) the malware uses to steal the user’s password.
 
+As soon as I opened the Any.run sandbox report, I saw a few different .exe files with VPN.exe being marked as 100/100 for malicious activity. I checked the MITRE ATT&CK techniques and looked under the Credential access tactic. I checked the Credentials from Password Stores and saw this threat was related to stealing credentials from web browsers.
+
+<img width="2234" height="1111" alt="image" src="https://github.com/user-attachments/assets/517a7a17-002b-40dd-9715-e7aacf5e3080" />
+
+<img width="2219" height="968" alt="image" src="https://github.com/user-attachments/assets/6cd082ef-4678-4b6b-be66-91f3f6119900" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   	T1555
+   ```
+
+</details>
