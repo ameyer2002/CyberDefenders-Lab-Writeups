@@ -98,3 +98,19 @@ After opening the sandbox report, we can see the parent process is **VPN.exe** a
    ```
 
 </details>
+
+
+> Q7: Understanding the malware's behavior post-data exfiltration can give insights into its evasion techniques. By analyzing the child processes, after successfully exfiltrating the user's data, how many seconds does it take for the malware to self-delete?
+
+Looking at the cmd used for the child process, I can see it is set to self delete after 5 seconds, **/t 5 & del /f /q "C:\Users\admin\AppData\Local\Temp\VPN.exe"**.
+
+<img width="2233" height="1129" alt="image" src="https://github.com/user-attachments/assets/d90a3686-7e44-4e8f-ac2d-d93ffef5ef10" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+    5
+   ```
+
+</details>
