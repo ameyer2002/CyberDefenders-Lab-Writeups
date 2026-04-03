@@ -83,3 +83,18 @@ As soon as I opened the Any.run sandbox report, I saw a few different .exe files
    ```
 
 </details>
+
+> Q6: By examining the child processes displayed in the Any.run sandbox report, which directory does the malware target for the deletion of all DLL files?
+
+After opening the sandbox report, we can see the parent process is **VPN.exe** and the child processes are **cmd.exe** and **timeout.exe**. After clicking on both of these processes, I can see cmd used for the cmd.exe process was **"C:\Windows\system32\cmd.exe" /c timeout /t 5 & del /f /q "C:\Users\admin\AppData\Local\Temp\VPN.exe" & del "C:\ProgramData\*.dll"" & exit** which I can see contains a delete command for files in the ProgramData directory.
+
+<img width="2232" height="1099" alt="image" src="https://github.com/user-attachments/assets/df5112ae-2abc-47e0-b7f5-e95db8508900" />
+
+<details>
+  <summary>Answer</summary>
+
+   ```
+   	C:\ProgramData
+   ```
+
+</details>
